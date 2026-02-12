@@ -35,7 +35,10 @@ function Login() {
   return (
     <div className="login-wrapper">
       <div class="login-card">
-        <div class="login-header">Welcome, User!</div>
+        <div class="login-container">
+          <div class="login-header">Sign In</div>
+          <div class="login-header-content">Enter your credentials to access your account</div>
+        </div>
         <div class="login-body">
             <input className="input-field" name="userName" placeholder="Email" onChange={e => setEmail(e.target.value)} />
             <input className="input-field" name="password" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />

@@ -97,6 +97,7 @@ function Student() {
                     <button
                       disabled={isEnrolled}
                       onClick={() => enroll(c.id)}
+                      className={isEnrolled ? "btn-enrolled" : "btn-enroll"}
                     >
                       {isEnrolled ? "Enrolled" : "Enroll"}
                     </button>

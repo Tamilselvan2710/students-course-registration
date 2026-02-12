@@ -45,13 +45,24 @@ body {
     overflow: hidden;
 }
 
-.login-header {
+.login-container {
     background: linear-gradient(135deg, #5f5fdc, #c850c0);
-    padding: 22px;
+    padding: 22px 22px;
+}
+
+.login-header {
     text-align: center;
     color: #fff;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+}
+
+.login-header-content {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .login-body {
@@ -180,6 +191,24 @@ h2.student-dashboard {
   cursor: pointer;
 }
 
+.btn-enrolled {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-enroll {
+  background: #e7e7e7;
+  color: black;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .btn-cancel {
   background: #e7e7e7;
   margin: 15px 0;
@@ -284,7 +313,10 @@ h2.student-dashboard {
 }
 
 button:disabled {
-  background: #6c757d;
+  background: #198754;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;  
 }
 
 /* ===== BREADCRUMB ===== */

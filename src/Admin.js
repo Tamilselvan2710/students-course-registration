@@ -19,7 +19,7 @@ function Admin() {
   const [showConfirm, setShowConfirm] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
 
-  const [errors, setErrors] = useState({}); // ✅ Validation errors
+  const [errors, setErrors] = useState({});
 
   const [form, setForm] = useState({
     title: "",
@@ -169,18 +169,20 @@ function Admin() {
                 <td>{c.title}</td>
                 <td>{c.description}</td>
                 <td>₹{c.fees}</td>
-                <td className="action-icons">
-                  <FaEdit
-                    className="icon edit-icon"
-                    title="Edit Course"
-                    onClick={() => openEditForm(c)}
-                  />
+                <td>
+                  <div className="action-icons">
+                    <FaEdit
+                      className="icon edit-icon"
+                      title="Edit Course"
+                      onClick={() => openEditForm(c)}
+                    />
 
-                  <FaTrash
-                    className="icon delete-icon"
-                    title="Delete Course"
-                    onClick={() => handleDeleteClick(c.id)}
-                  />
+                    <FaTrash
+                      className="icon delete-icon"
+                      title="Delete Course"
+                      onClick={() => handleDeleteClick(c.id)}
+                    />
+                  </div>
                 </td>
               </tr>
             ))
